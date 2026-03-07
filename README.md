@@ -13,8 +13,8 @@ Instead of standard text notes, I am summarizing each lesson into clean, visuall
 - [x] **[Introduction to AI Fluency](./lesson1-ai-fluency.html)** ✅
 
 ### 2. The AI Fluency Framework
-- [x] Why do we need AI Fluency? ⏳
-- [ ] The 4D Framework ⏳
+-[x] **[The AI Fluency Framework](./lesson2-ai-framework.html)** ✅
+- [x] **[The 4D Framework](./lesson2b-4d-framework.html)** ✅
 
 ### 3. Deep Dive 1: What is Generative AI? (Part 1)
 - [ ] Generative AI fundamentals ⏳

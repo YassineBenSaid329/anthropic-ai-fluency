@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 4D Framework - Lesson 2 Resume</title>
+    <style>
+        :root {
+            --primary-color: #5b42f3;
+            --secondary-color: #f3f4f6;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            
+            /* 4D Colors */
+            --color-delegation: #8b5cf6;
+            --color-description: #3b82f6;
+            --color-discernment: #f59e0b;
+            --color-diligence: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e1b4b, #4338ca);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .instructors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .badge {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .highlight-box {
+            background-color: #eef2ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .four-ds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 4D Top Borders */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+        }
+        .card-delegation::before { background-color: var(--color-delegation); }
+        .card-description::before { background-color: var(--color-description); }
+        .card-discernment::before { background-color: var(--color-discernment); }
+        .card-diligence::before { background-color: var(--color-diligence); }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            background: var(--secondary-color);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            margin: 0 0 10px 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .card ul {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .card li {
+            margin-bottom: 5px;
+        }
+
+        .loop-section {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .loop-section h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .loop-visual {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: var(--text-main);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin: 15px 0;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 30px 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .four-ds-grid {
+                grid-template-columns: 1fr;
+            }
+            .loop-visual {
+                flex-direction: column;
+                border-radius: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>The 4D Framework</h1>
+        <p>Lesson 2: Core Competencies for AI Collaboration</p>
+        <div class="instructors">
+            <span class="badge">🎙️ Rick Dacon</span>
+        </div>
+    </header>
+
+    <div class="content">
+        <section>
+            <h2 class="section-title">Future-Proofing Your Skills</h2>
+            <p>No matter how you interact with AI—through automation, augmentation, or agency—there are four essential competencies that guarantee effective, efficient, ethical, and safe collaboration. These are not tied to specific tools or fleeting prompt techniques; they are <strong>fundamental, adaptable skills</strong> designed to grow alongside rapidly evolving technology.</p>
+        </section>
+
+        <section>
+            <div class="four-ds-grid">
+                <!-- Delegation -->
+                <div class="card card-delegation">
+                    <div class="card-header">
+                        <div class="card-icon">🗺️</div>
+                        <h3 style="color: var(--color-delegation);">1. Delegation</h3>
+                    </div>
+                    <p><strong>Focuses on the big picture and strategic division of work.</strong> It's not just about offloading tasks; it's about having a clear vision of your goals.</p>
+                    <ul>
+                        <li>Understand the problem you are solving.</li>
+                        <li>Recognize what AI can and cannot do well.</li>
+                        <li>Decide what tasks to hand off (e.g., data review) vs. what to keep for yourself (e.g., critical analysis & final conclusions).</li>
+                    </ul>
+                </div>
+
+                <!-- Description -->
+                <div class="card card-description">
+                    <div class="card-header">
+                        <div class="card-icon">🗣️</div>
+                        <h3 style="color: var(--color-description);">2. Description</h3>
+                    </div>
+                    <p><strong>Focuses on clear, detailed, and context-rich communication.</strong> It goes far beyond simply "writing prompts."</p>
+                    <ul>
+                        <li>Establish your ultimate goals and desired output format.</li>
+                        <li>Provide necessary background context and information.</li>
+                        <li>Specify the exact tone, style, and approach you want the AI to take (e.g., "Don't give me the answer, act as a tutor and guide me").</li>
+                    </ul>
+                </div>
+
+                <!-- Discernment -->
+                <div class="card card-discernment">
+                    <div class="card-header">
+                        <div class="card-icon">🧐</div>
+                        <h3 style="color: var(--color-discernment);">3. Discernment</h3>
+                    </div>
+                    <p><strong>Focuses on thoughtfully evaluating what the AI produces.</strong> This requires your personal domain expertise and critical insight.</p>
+                    <ul>
+                        <li>Verify if the facts are accurate and the reasoning is logical.</li>
+                        <li>Check if the recommendations align with your values.</li>
+                        <li>Determine if the output actually helps you move forward, needs refinement, or should be discarded entirely.</li>
+                    </ul>
+                </div>
+
+                <!-- Diligence -->
+                <div class="card card-diligence">
+                    <div class="card-header">
+                        <div class="card-icon">🛡️</div>
+                        <h3 style="color: var(--color-diligence);">4. Diligence</h3>
+                    </div>
+                    <p><strong>Focuses on responsible, safe, and ethical AI interactions.</strong> It means taking full ownership of your AI-assisted work.</p>
+                    <ul>
+                        <li>Control for potential biases and ensure fairness.</li>
+                        <li>Protect sensitive data and privacy.</li>
+                        <li>Maintain transparency about the involvement of AI in your final product.</li>
+                        <li>Be fully accountable for the final results.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="loop-section">
+            <h3>🔄 The Collaboration Loop</h3>
+            <p>Most of our interactions with AI do not happen in a single step. They rely on continuous, small loops between two of the core competencies:</p>
+            
+            <div class="loop-visual">
+                <span style="color: var(--color-description);">Description</span>
+                <span>➔</span>
+                <span style="color: var(--text-muted); font-weight: normal; font-size: 0.9rem;">AI Output</span>
+                <span>➔</span>
+                <span style="color: var(--color-discernment);">Discernment</span>
+                <span>➔</span>
+                <span style="color: var(--text-muted); font-weight: normal; font-size: 0.9rem;">Refine Request</span>
+                <span>➔</span>
+                <span>🔁</span>
+            </div>
+            
+            <p style="margin-bottom: 0; font-size: 0.95rem; color: var(--text-muted);"><em>Describing what we need ➔ Evaluating what we get ➔ Refining our request.</em></p>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>
