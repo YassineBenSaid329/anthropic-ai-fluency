@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to AI Fluency - Lesson Resume</title>
+    <style>
+        :root {
+            --primary-color: #5b42f3;
+            --secondary-color: #f3f4f6;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e1b4b, #4338ca);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .instructors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .badge {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .highlight-box {
+            background-color: #eef2ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .four-ds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .outcomes {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .outcomes ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .outcomes li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 30px 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>Introduction to AI Fluency</h1>
+        <p>Anthropic Curriculum: Framework & Foundations</p>
+        <div class="instructors">
+            <span class="badge">🎙️ Joe Feller</span>
+            <span class="badge">🎙️ Drew Bent</span>
+            <span class="badge">🎙️ Rick Dacon</span>
+            <span class="badge">🎙️ Maggie Vo</span>
+        </div>
+    </header>
+
+    <div class="content">
+        <section>
+            <h2 class="section-title">Core Philosophy</h2>
+            <p>This course is <strong>not just about AI as a technology</strong>, but about human-AI interaction. Instead of viewing AI as a "next-level spellchecker" or chasing fleeting prompt engineering fads, the goal is to treat AI as a trusted partner for creative and innovative problem-solving.</p>
+            
+            <div class="highlight-box">
+                <strong>What is AI Fluency?</strong><br>
+                The ability to engage with AI systems in ways that are <em>effective, efficient, ethical, and safe.</em> The ultimate goal is to change how we think about AI so we can learn to <strong>think <em>with</em> AI</strong>.
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">The 4 D's of AI Interaction</h2>
+            <p>To bridge the gap between what's possible and what feels comfortable, the curriculum introduces four core competencies rather than tactical, quickly outdated technical tricks:</p>
+            
+            <div class="four-ds-grid">
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>1. Delegation</h3>
+                    <p><strong>When should humans do the work, and when should AI?</strong> Understanding the boundaries of appropriate tasks for AI systems vs. human expertise.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💬</div>
+                    <h3>2. Description</h3>
+                    <p><strong>How do we communicate clearly with AI systems?</strong> The skill of accurately expressing intent, context, and goals to an AI partner.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>3. Discernment</h3>
+                    <p><strong>How do we evaluate what AI gives us?</strong> Developing the critical thinking required to judge the accuracy, relevance, and quality of AI outputs.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>4. Diligence</h3>
+                    <p><strong>How do we ensure our interaction is responsible?</strong> Maintaining transparency, accountability, and ethical considerations in all AI collaborations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="outcomes">
+            <h2 class="section-title" style="border-bottom: 2px solid #d1d5db;">Expected Course Outcomes</h2>
+            <ul>
+                <li><strong>A Guiding Framework:</strong> Navigate AI beyond tactical prompt engineering tips.</li>
+                <li><strong>Decisive Confidence:</strong> Know exactly <em>when</em> and <em>how</em> to engage AI effectively.</li>
+                <li><strong>Practical Collaboration Skills:</strong> Achieve fluid, thoughtful human-AI partnerships.</li>
+                <li><strong>Accountability:</strong> Gain the ability to evaluate and take full responsibility for the outcomes of your AI collaborations.</li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>
