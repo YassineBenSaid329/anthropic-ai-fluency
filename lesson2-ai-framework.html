@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AI Fluency Framework - Lesson 2 Resume</title>
+    <style>
+        :root {
+            --primary-color: #5b42f3;
+            --secondary-color: #f3f4f6;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e1b4b, #4338ca);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .highlight-box {
+            background-color: #eef2ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .three-modes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Subtle colored top border for cards */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+        .card-automation::before { background-color: #9ca3af; }
+        .card-augmentation::before { background-color: #10b981; }
+        .card-agency::before { background-color: #3b82f6; }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+            font-size: 1.3rem;
+        }
+
+        .card .definition {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .paradigm-shift {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .paradigm-shift p {
+            margin: 0 0 15px 0;
+        }
+        
+        .paradigm-shift p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 30px 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>The AI Fluency Framework</h1>
+        <p>Lesson 2: Why Do We Need AI Fluency?</p>
+    </header>
+
+    <div class="content">
+        <section>
+            <h2 class="section-title">Beyond Prompt Engineering</h2>
+            <p>Access to powerful systems does not automatically equal competence. AI fluency goes far beyond memorizing the "top 10 prompts of the month." It requires developing a collection of practical skills, knowledge, insights, and values that adapt as technology evolves.</p>
+            
+            <div class="highlight-box">
+                <strong>The Core Definition:</strong><br>
+                At its heart, AI fluency means interacting with AI systems in ways that are <strong>effective, efficient, ethical, and safe.</strong> It is about maximizing outputs without wasting time, while protecting privacy and security.
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Three Ways to Interact with AI</h2>
+            <p>Through research, Anthropic has identified three primary modes of human-AI engagement. No mode is inherently "better" than the others; they excel in different situations and can even be combined in a single project.</p>
+            
+            <div class="three-modes-grid">
+                <!-- Automation Card -->
+                <div class="card card-automation">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Automation</h3>
+                    <div class="definition">"AI does work for you following explicit instructions."</div>
+                    <p><strong>How it works:</strong> You define exactly what needs to be done (e.g., summarize a document, draft an email), and the AI executes it.<br><br>
+                    <strong>Best for:</strong> When you have a highly clear outcome in mind and need quick execution.</p>
+                </div>
+
+                <!-- Augmentation Card -->
+                <div class="card card-augmentation">
+                    <div class="card-icon">🧠</div>
+                    <h3>Augmentation</h3>
+                    <div class="definition">"You and the AI collaboratively work together."</div>
+                    <p><strong>How it works:</strong> The AI becomes a creative thinking and problem-solving partner. You bounce ideas back and forth to refine thoughts.<br><br>
+                    <strong>Best for:</strong> When solutions aren't straightforward and you need space to explore, experiment, and do your work <em>better</em>.</p>
+                </div>
+
+                <!-- Agency Card -->
+                <div class="card card-agency">
+                    <div class="card-icon">⚡</div>
+                    <h3>Agency</h3>
+                    <div class="definition">"AI works independently on your behalf."</div>
+                    <p><strong>How it works:</strong> Instead of defining specific actions, you establish the AI's knowledge and behavior patterns (e.g., categorizing incoming emails, dynamically interacting with users).<br><br>
+                    <strong>Best for:</strong> Acting as a "director setting a vision" rather than a scriptwriter giving exact directions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="paradigm-shift">
+            <h2 class="section-title" style="border-bottom: 2px solid #d1d5db;">The Paradigm Shift</h2>
+            <p>Understanding these three modes helps us recognize a fundamental truth: <strong>AI is not just a tool.</strong></p>
+            <p>While AI can act as a tool (Automation), it can also act as a medium, a partner, or a co-creator (Augmentation & Agency). Because technology has taken on this new collaborative role in our creative and problem-solving work, <strong>humans must adopt new roles and skills</strong> to match.</p>
+            <p><em>These essential skills form the "4 D's" framework which is explored in the following lessons.</em></p>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>
