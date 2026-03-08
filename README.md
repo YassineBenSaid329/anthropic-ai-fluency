@@ -17,7 +17,7 @@ Instead of standard text notes, I am summarizing each lesson into clean, visuall
 - [x] **[The 4D Framework](./lesson2b-4d-framework.html)** ✅
 
 ### 3. Deep Dive 1: What is Generative AI? (Part 1)
-- [x] Generative AI fundamentals ⏳
+- [x] **[Generative AI Fundamentals](./lesson3-gen-ai-fundamentals.html)** ✅
 - [ ] Capabilities & limitations ⏳
 
 ### 4. Delegation
