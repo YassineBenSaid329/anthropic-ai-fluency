@@ -7,9 +7,11 @@
     <style>
         :root {
             --primary-color: #5b42f3;
+            --secondary-color: #4f46e5;
             --bg-body: #f9fafb;
             --bg-card: #ffffff;
             --text-main: #1f2937;
+            --text-muted: #4b5563;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -18,13 +20,47 @@
             margin: 0; padding: 40px 20px;
             display: flex; flex-direction: column; align-items: center;
         }
-        .container { max-width: 800px; width: 100%; }
+        .container { max-width: 900px; width: 100%; }
+        
         header { text-align: center; margin-bottom: 50px; }
-        h1 { font-size: 2.5rem; color: #1e1b4b; margin-bottom: 10px; }
-        .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        header h1 { font-size: 2.8rem; color: #1e1b4b; margin-bottom: 10px; }
+        header p { font-size: 1.2rem; color: var(--text-muted); }
+
+        /* Course Info Section */
+        .course-about {
+            background: linear-gradient(135deg, #ffffff, #f3f4f6);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .course-about h2 { color: var(--primary-color); margin-top: 0; }
+        .course-about p { line-height: 1.7; color: var(--text-main); font-size: 1.05rem; }
+
+        .framework-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .pill {
+            background: #eef2ff;
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: 1px solid #c7d2fe;
+        }
+
+        /* Syllabus Grid */
+        h2.section-label { align-self: flex-start; margin-bottom: 20px; font-size: 1.5rem; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 15px; width: 100%; }
+        
         .lesson-link {
             background: var(--bg-card);
-            padding: 25px;
+            padding: 20px 25px;
             border-radius: 12px;
             text-decoration: none;
             color: var(--text-main);
@@ -32,25 +68,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: all 0.2s ease;
         }
         .lesson-link:hover {
-            transform: translateX(10px);
+            transform: translateX(8px);
             border-color: var(--primary-color);
             box-shadow: 0 10px 15px rgba(0,0,0,0.05);
         }
-        .lesson-info h3 { margin: 0; color: var(--primary-color); }
-        .lesson-info p { margin: 5px 0 0; font-size: 0.9rem; color: #6b7280; }
+        .lesson-info h3 { margin: 0; font-size: 1.1rem; }
+        .lesson-info p { margin: 4px 0 0; font-size: 0.9rem; color: var(--text-muted); }
+        
         .status-badge {
             background: #dcfce7;
             color: #166534;
             padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
         }
-        .coming-soon { opacity: 0.6; pointer-events: none; }
+        .coming-soon { opacity: 0.6; cursor: not-allowed; }
+        .coming-soon .status-badge { background: #f3f4f6; color: #6b7280; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
@@ -58,24 +100,45 @@
 <div class="container">
     <header>
         <h1>🤖 AI Fluency & Foundations</h1>
-        <p>A visual log of my journey through the Anthropic Curriculum</p>
+        <p>A Visual Study Guide to the Anthropic Curriculum</p>
     </header>
 
+    <!-- NEW: Course Definition Section -->
+    <section class="course-about">
+        <h2>About the Course</h2>
+        <p>
+            <strong>AI Fluency: Framework & Foundations</strong> is a professional curriculum developed by <strong>Anthropic</strong> in partnership with academic experts <strong>Prof. Joseph Feller</strong> (University College Cork) and <strong>Prof. Rick Dakan</strong> (Ringling College). 
+        </p>
+        <p>
+            The course moves beyond simple "prompt engineering" to establish a multidisciplinary model for human-AI collaboration. It is designed to help users interact with AI systems—like Claude—in ways that are <strong>effective, efficient, ethical, and safe.</strong>
+        </p>
+        <div class="framework-pills">
+            <span class="pill">🤝 Delegation</span>
+            <span class="pill">💬 Description</span>
+            <span class="pill">🔍 Discernment</span>
+            <span class="pill">🛡️ Diligence</span>
+            <span class="pill">⚙️ Automation</span>
+            <span class="pill">🧠 Augmentation</span>
+            <span class="pill">⚡ Agency</span>
+        </div>
+    </section>
+
+    <h2 class="section-label">Interactive Resumes</h2>
     <div class="grid">
         <!-- Lesson 1 -->
         <a href="lesson1-ai-fluency.html" class="lesson-link">
             <div class="lesson-info">
-                <h3>Lesson 1: Introduction</h3>
-                <p>The core philosophy of AI Fluency.</p>
+                <h3>Introduction to AI Fluency</h3>
+                <p>The core mission: Thinking <em>with</em> AI instead of <em>about</em> AI.</p>
             </div>
             <span class="status-badge">Completed</span>
         </a>
 
-        <!-- Lesson 2 -->
+        <!-- Lesson 2a -->
         <a href="lesson2-ai-framework.html" class="lesson-link">
             <div class="lesson-info">
-                <h3>Lesson 2A: The Framework</h3>
-                <p>Automation, Augmentation, and Agency.</p>
+                <h3>The AI Fluency Framework</h3>
+                <p>The three modes: Automation, Augmentation, and Agency.</p>
             </div>
             <span class="status-badge">Completed</span>
         </a>
@@ -83,17 +146,17 @@
         <!-- Lesson 2b -->
         <a href="lesson2b-4d-framework.html" class="lesson-link">
             <div class="lesson-info">
-                <h3>Lesson 2B: The 4D's</h3>
-                <p>Delegation, Description, Discernment, Diligence.</p>
+                <h3>The 4D Framework</h3>
+                <p>Strategic competencies: Delegation, Description, Discernment, and Diligence.</p>
             </div>
             <span class="status-badge">Completed</span>
         </a>
 
-        <!-- Lesson 3 -->
+        <!-- Lesson 3a -->
         <a href="lesson3-gen-ai-fundamentals.html" class="lesson-link">
             <div class="lesson-info">
-                <h3>Lesson 3A: Gen AI Fundamentals</h3>
-                <p>Under the hood: Transformers & Training.</p>
+                <h3>Generative AI Fundamentals</h3>
+                <p>LLM Mechanics: Transformers, Pre-training, and Fine-tuning.</p>
             </div>
             <span class="status-badge">Completed</span>
         </a>
@@ -101,18 +164,19 @@
         <!-- Lesson 3b -->
         <a href="lesson3b-capabilities-limitations.html" class="lesson-link">
             <div class="lesson-info">
-                <h3>Lesson 3B: Capabilities & Limitations</h3>
-                <p>Strengths, Hallucinations, and the Cutoff.</p>
+                <h3>Capabilities & Limitations</h3>
+                <p>Understanding hallucinations, cutoffs, and probabilistic nature.</p>
             </div>
             <span class="status-badge">Completed</span>
         </a>
 
-        <!-- Future Lessons Placeholder -->
+        <!-- Future -->
         <div class="lesson-link coming-soon">
             <div class="lesson-info">
-                <h3>Section 4: Delegation</h3>
-                <p>Coming soon...</p>
+                <h3>Deep Dive: Delegation</h3>
+                <p>Strategies for planning projects and dividing labor with AI.</p>
             </div>
+            <span class="status-badge">In Progress</span>
         </div>
     </div>
 </div>
