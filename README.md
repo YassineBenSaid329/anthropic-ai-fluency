@@ -21,7 +21,7 @@ Instead of standard text notes, I am summarizing each lesson into clean, visuall
 - [x] **[Capabilities & Limitations](./lesson3b-capabilities-limitations.html)** ✅
 
 ### 4. Delegation
-- [ ] A closer look at Delegation ⏳
+- [x] **[A closer look at Delegation](./lesson4-delegation.html)** ✅
 - [ ] Project planning and Delegation ⏳
 
 ### 5. Description
