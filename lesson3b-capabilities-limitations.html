@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Capabilities & Limitations - Lesson 3B</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --success-color: #059669;
+            --warning-color: #d97706;
+            --danger-color: #dc2626;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #111827, #374151);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 { margin: 0; font-size: 2.2rem; }
+        .header p { opacity: 0.8; margin: 10px 0 0; }
+
+        .content { padding: 40px; }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 20px 0;
+        }
+
+        .card {
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .card-success { border-top: 5px solid var(--success-color); }
+        .card-warning { border-top: 5px solid var(--warning-color); }
+
+        .card h3 { margin-top: 0; display: flex; align-items: center; gap: 10px; }
+
+        /* Terminology Box */
+        .term-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .term-card {
+            background: #fffbeb;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #fde68a;
+        }
+
+        .term-card b { color: #92400e; display: block; margin-bottom: 5px; }
+
+        /* Partnership Section */
+        .partnership {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .vs-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .vs-side { flex: 1; text-align: center; }
+        .vs-divider { padding: 0 20px; font-weight: bold; color: var(--primary-color); }
+
+        @media (max-width: 600px) {
+            .grid, .vs-container { grid-template-columns: 1fr; flex-direction: column; }
+            .content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>Capabilities & Limitations</h1>
+        <p>Lesson 3B: Getting to know your new "AI Colleague"</p>
+    </header>
+
+    <div class="content">
+        <section>
+            <h2 class="section-title">The Versatile Colleague (Strengths)</h2>
+            <div class="grid">
+                <div class="card card-success">
+                    <h3>✅ Language Mastery</h3>
+                    <p>Skilled at capturing specific voices, condensing reports into summaries, and translating complex topics across fields (microbiology to marketing).</p>
+                </div>
+                <div class="card card-success">
+                    <h3>✅ Contextual Memory</h3>
+                    <p>Maintains the "thread" of a conversation, remembering earlier details and project deadlines discussed within the same session.</p>
+                </div>
+            </div>
+            <p><strong>The "Generalist" Edge:</strong> Unlike traditional software, the same model can write poetry, analyze business trends, and help with coding without needing separate training for each task.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">The Boundaries (Limitations)</h2>
+            <div class="grid">
+                <div class="card card-warning">
+                    <h3>⚠️ The Fact Gap</h3>
+                    <p>AI doesn't "verify" facts during training. It follows statistical patterns, which can lead to <strong>Hallucinations</strong>—confidently stating plausible but incorrect info.</p>
+                </div>
+                <div class="card card-warning">
+                    <h3>⚠️ Reasoning Hurdles</h3>
+                    <p>Historically struggles with multi-step math or complex logic, though "Extended Thinking" models are currently bridging this gap.</p>
+                </div>
+            </div>
+
+            <div class="term-grid">
+                <div class="term-card">
+                    <b>Knowledge Cutoff</b>
+                    The date when training ended. The AI is "in a retreat" and doesn't know what happened after this date without web tools.
+                </div>
+                <div class="term-card">
+                    <b>Non-Deterministic</b>
+                    Ask the same question twice, get different answers. AI makes <em>probabilistic</em> decisions, not fixed ones.
+                </div>
+                <div class="term-card">
+                    <b>Temperature</b>
+                    A setting used to control the randomness or "creativity" of the AI's responses.
+                </div>
+            </div>
+        </section>
+
+        <section class="partnership">
+            <h2 class="section-title" style="margin-top:0; border-bottom-color: #bae6fd;">Complementary Strengths</h2>
+            <p>AI fluency is about knowing when to lead and when to let the AI support.</p>
+            <div class="vs-container">
+                <div class="vs-side">
+                    <h4 style="color: var(--primary-color); margin-bottom: 5px;">Humans Bring</h4>
+                    <p style="font-size: 0.9rem;">Critical Thinking<br>Ethical Oversight<br>Creative Judgment</p>
+                </div>
+                <div class="vs-divider">+</div>
+                <div class="vs-side">
+                    <h4 style="color: var(--success-color); margin-bottom: 5px;">AI Brings</h4>
+                    <p style="font-size: 0.9rem;">Processing Scale<br>Pattern Recognition<br>Iterative Speed</p>
+                </div>
+            </div>
+        </section>
+
+        <p style="text-align: center; margin-top: 30px; font-style: italic; color: var(--text-muted);">
+            "Understanding what AI <u>cannot</u> do is just as important as knowing what it can."
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
