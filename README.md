@@ -25,7 +25,7 @@ Instead of standard text notes, I am summarizing each lesson into clean, visuall
 - [x] **[Project planning and Delegation](./Project%20Planning%20and%20Delegation.md)**
 
 ### 5. Description
-- [ ] A closer look at Description ⏳
+- [x] **[A closer look at Description](./lesson5-description.html)**
 
 ### 6. Deep Dive 2: Effective prompting techniques
 - [ ] Effective prompting techniques ⏳
