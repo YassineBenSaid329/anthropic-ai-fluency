@@ -22,7 +22,7 @@ Instead of standard text notes, I am summarizing each lesson into clean, visuall
 
 ### 4. Delegation
 - [x] **[A closer look at Delegation](./lesson4-delegation.html)** ✅
-- [ ] Project planning and Delegation ⏳
+- [x] **[Project planning and Delegation](./Project%20Planning%20and%20Delegation.md)**
 
 ### 5. Description
 - [ ] A closer look at Description ⏳
