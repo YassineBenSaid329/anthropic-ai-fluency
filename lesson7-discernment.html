@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Closer Look at Discernment - Lesson Resume</title>
+    <style>
+        :root {
+            --primary-color: #5b42f3;
+            --secondary-color: #f3f4f6;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e1b4b, #4338ca);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .wisdom-quote {
+            background-color: #eef2ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 0 0 40px 0;
+            font-size: 1.1rem;
+        }
+        .wisdom-quote p { margin: 0; }
+        .wisdom-quote strong { color: var(--primary-color); }
+        
+        .discernment-pillar {
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .pillar-header {
+            display: flex; align-items: center; gap: 15px;
+            background-color: var(--secondary-color);
+            padding: 20px; border-bottom: 1px solid var(--border-color);
+        }
+        .pillar-icon { font-size: 2.5rem; }
+        .pillar-title h2 { margin: 0; font-size: 1.5rem; color: var(--primary-color); }
+        .pillar-title p { margin: 0; font-weight: 600; color: var(--text-muted); }
+
+        .pillar-content { padding: 25px; }
+        .pillar-content ul { list-style-type: '✓ '; padding-left: 20px; }
+        .pillar-content li { margin-bottom: 8px; padding-left: 10px; }
+
+        .example-box { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px; }
+        .feedback-example { border-radius: 8px; padding: 15px; font-size: 0.9rem; line-height: 1.5; }
+        .feedback-before { background-color: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+        .feedback-before::before { content: '❌ Ineffective Feedback'; display: block; font-weight: 700; margin-bottom: 10px; }
+        .feedback-after { background-color: #dcfce7; color: #14532d; border: 1px solid #bbf7d0; }
+        .feedback-after::before { content: '✅ Discerning Feedback'; display: block; font-weight: 700; margin-bottom: 10px; }
+
+        .feedback-loop {
+            background: var(--secondary-color);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .feedback-loop h2 { color: var(--primary-color); margin-top: 0; }
+        .feedback-loop p { font-size: 1.2rem; font-weight: 500; }
+        .loop-arrow { font-size: 1.5rem; color: var(--primary-color); margin: 0 15px; }
+
+        .rethink-box {
+            background-color: #fefce8;
+            border: 1px solid #fde047;
+            border-left: 4px solid #facc15;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .rethink-box h3 { margin-top: 0; display: flex; align-items: center; gap: 10px; color: #713f12; }
+        .rethink-box p { margin-bottom: 0; }
+
+        @media (max-width: 700px) { .content { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>A Closer Look at Discernment</h1>
+        <p>Your Quality Control System for AI Collaboration</p>
+    </header>
+
+    <div class="content">
+        <section class="wisdom-quote">
+            <p>If <strong>Description</strong> is about clearly communicating what you want, <strong>Discernment</strong> is about deciding whether what you get back actually meets your needs.</p>
+        </section>
+
+        <!-- 1. Product Discernment -->
+        <div class="discernment-pillar">
+            <div class="pillar-header"><div class="pillar-icon">✅</div><div class="pillar-title"><h2>Product Discernment</h2><p>Judging the quality of the final output.</p></div></div>
+            <div class="pillar-content">
+                <p>This is the most direct form of evaluation. It requires your domain expertise to judge the AI-generated content against your standards.</p>
+                <h4>Evaluation Checklist:</h4>
+                <ul>
+                    <li>Is it <strong>factually accurate</strong> and free of hallucinations?</li>
+                    <li>Is it <strong>appropriate</strong> for the intended audience and purpose?</li>
+                    <li>Is it <strong>coherent, logical, and well-structured</strong>?</li>
+                    <li>Does it fully <strong>meet the requirements</strong> you specified?</li>
+                </ul>
+                <div class="example-box">
+                    <div class="feedback-example feedback-before"><strong>AI Output:</strong> "Our new app is good."<br><br><strong>Your Feedback:</strong> "This is too generic."</div>
+                    <div class="feedback-example feedback-after"><strong>AI Output:</strong> "Our new app is good."<br><br><strong>Your Feedback:</strong> "This slogan is factually correct but lacks impact (Product Discernment). Let's revise. Generate five slogans that highlight the time-saving feature for busy professionals aged 30-45 (Better Description)."</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Process Discernment -->
+        <div class="discernment-pillar">
+            <div class="pillar-header"><div class="pillar-icon">⚙️</div><div class="pillar-title"><h2>Process Discernment</h2><p>Judging the quality of the AI's reasoning.</p></div></div>
+            <div class="pillar-content">
+                <p>For complex tasks, you must assess not just the final answer, but *how* the AI got there. This ensures you can trust its work, especially when the correct answer isn't obvious.</p>
+                <h4>Watch For:</h4>
+                <ul>
+                    <li><strong>Logical errors</strong> or flawed reasoning steps.</li>
+                    <li><strong>Lapses in attention</strong> (e.g., forgetting an earlier instruction).</li>
+                    <li><strong>Getting "stuck"</strong> on a rejected idea or detail.</li>
+                    <li><strong>Circular reasoning</strong> that doesn't advance the solution.</li>
+                </ul>
+                <div class="example-box">
+                    <div class="feedback-example feedback-before">"No, not that idea again."</div>
+                    <div class="feedback-example feedback-after">"I'm noticing you're re-inserting elements of the 'eco-friendly' angle we decided to discard three messages ago (Process Discernment). Please ignore all previous brainstorming and focus only on developing the 'luxury a-la-carte' option from here on out."</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 3. Performance Discernment -->
+        <div class="discernment-pillar">
+            <div class="pillar-header"><div class="pillar-icon">🎭</div><div class="pillar-title"><h2>Performance Discernment</h2><p>Judging the quality of the interaction itself.</p></div></div>
+            <div class="pillar-content">
+                <p>This is about the *style* of collaboration. Is the AI behaving like the partner you need for this specific task? The process is *what* it's doing; performance is *how* it's interacting with you while doing it.</p>
+                <h4>Ask Yourself:</h4>
+                <ul>
+                    <li>Is its communication style <strong>helpful and efficient</strong>?</li>
+                    <li>Is it asking <strong>too many questions</strong> when you need speed?</li>
+                    <li>Is it being <strong>too brief</strong> when you need comprehensive detail?</li>
+                    <li>Does it <strong>respond well to feedback</strong> and direction?</li>
+                </ul>
+                <div class="example-box">
+                    <div class="feedback-example feedback-before">"Just give me the answers."</div>
+                    <div class="feedback-example feedback-after">"Your detailed clarifying questions are helpful for formal reports, but for this task, your performance is too slow (Performance Discernment). Please switch roles. Act as a rapid-fire brainstormer. Do not ask for clarification; generate ten raw, unfiltered ideas based on my last prompt."</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="feedback-loop">
+            <h2>The Discernment-Description Feedback Loop</h2>
+            <p>
+                <span>🔍 Discernment Flags a Problem</span>
+                <span class="loop-arrow">→</span>
+                <span>💬 Better Description Provides a Solution</span>
+                <span class="loop-arrow">→</span>
+                <span>🎯 Leading to a Higher Quality Output</span>
+            </p>
+        </section>
+
+        <div class="rethink-box">
+            <h3>💡 Beyond Feedback: Rethinking Delegation</h3>
+            <p>When you consistently find flaws in the AI's output or process, the problem might not be your description. Your discernment should trigger a higher-level question:</p>
+            <p><strong>"Am I using the right tool for this job, or approaching this problem in the right way?"</strong></p>
+            <p>Sometimes, the solution isn't a better prompt, but a different tool or a completely different strategy.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
