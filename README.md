@@ -31,7 +31,7 @@ Instead of standard text notes, I am summarizing each lesson into clean, visuall
 - [x] **[Effective prompting techniques](lesson6-prompting-techniques.html)**
 
 ### 7. Discernment
-- [ ] A closer look at Discernment ⏳
+- [x] **[A closer look at Discernment](lesson7-discernment.html)**
 - [ ] The Description-Discernment loop ⏳
 
 ### 8. Diligence
