@@ -28,7 +28,7 @@ Instead of standard text notes, I am summarizing each lesson into clean, visuall
 - [x] **[A closer look at Description](./lesson5-description.html)**
 
 ### 6. Deep Dive 2: Effective prompting techniques
-- [ ] Effective prompting techniques ⏳
+- [x] **[Effective prompting techniques](lesson6-prompting-techniques.html)**
 
 ### 7. Discernment
 - [ ] A closer look at Discernment ⏳
