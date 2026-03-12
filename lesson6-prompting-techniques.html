@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effective Prompting Techniques - Lesson Resume</title>
+    <style>
+        :root {
+            --primary-color: #5b42f3;
+            --secondary-color: #f3f4f6;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e1b4b, #4338ca);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .wisdom-quote {
+            background-color: #eef2ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 0 0 40px 0;
+        }
+        
+        .wisdom-quote p { margin: 0; font-size: 1.1rem; font-style: italic;}
+        .wisdom-quote strong { font-style: normal; }
+        
+        .technique-card {
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .technique-header {
+            display: flex; align-items: center; gap: 15px;
+            background-color: var(--secondary-color);
+            padding: 20px; border-bottom: 1px solid var(--border-color);
+        }
+        .technique-icon { font-size: 2rem; }
+        .technique-title h3 { margin: 0; font-size: 1.3rem; }
+        .technique-title p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+
+        .technique-content { padding: 25px; }
+
+        .example-box { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px; }
+        .prompt-example { border-radius: 8px; padding: 15px; font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 0.9rem; line-height: 1.5; }
+        .prompt-before { background-color: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+        .prompt-before::before { content: '🤔 Before: A Vague Request'; display: block; font-weight: 700; margin-bottom: 10px; font-family: -apple-system, sans-serif; }
+        .prompt-after { background-color: #dcfce7; color: #14532d; border: 1px solid #bbf7d0; }
+        .prompt-after::before { content: '🎯 After: A Rich Prompt'; display: block; font-weight: 700; margin-bottom: 10px; font-family: -apple-system, sans-serif; }
+
+        .secret-weapon {
+            background-color: var(--primary-color);
+            color: white; padding: 30px; border-radius: 12px;
+            text-align: center; margin: 40px 0;
+        }
+        .secret-weapon h2 { margin-top: 0; color: white; }
+        .secret-weapon code { background-color: rgba(0,0,0,0.2); padding: 3px 6px; border-radius: 4px; }
+
+        .recap-section { margin-top: 40px; }
+        .recap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .recap-column h3 { display: flex; align-items: center; gap: 8px; }
+        .recap-column ul { list-style: none; padding: 0; margin: 0; }
+        .recap-column li { background-color: var(--secondary-color); border: 1px solid var(--border-color); padding: 10px 15px; border-radius: 8px; margin-bottom: 8px; font-size: 0.95rem; }
+
+        @media (max-width: 700px) {
+            .content { padding: 20px; }
+            .recap-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>Effective Prompting Techniques</h1>
+        <p>Applying the Description Competency in Practice</p>
+    </header>
+
+    <div class="content">
+        <section class="wisdom-quote">
+            <p><strong>Think of prompting like explaining a task to a helpful new colleague</strong> who's eager to assist, but needs clear directions and expectation setting to do their best work.</p>
+        </section>
+
+        <!-- 1. Context -->
+        <div class="technique-card">
+            <div class="technique-header"><span class="technique-icon">🌍</span><div class="technique-title"><h3>Give Context</h3><p>Be specific about what you want, why you want it, and who you are.</p></div></div>
+            <div class="technique-content">
+                <p>Vague prompts lead to generic answers. Provide background information about your goal, your own knowledge level, and how you plan to use the output. This helps the AI tailor its response perfectly to your needs.</p>
+                <div class="example-box">
+                    <div class="prompt-example prompt-before">Tell me about climate change.</div>
+                    <div class="prompt-example prompt-after">
+                        <strong>My Goal:</strong> I'm preparing for a job interview at an agricultural research lab in Indonesia.<br>
+                        <strong>My Background:</strong> I have a degree in ecology, but no specific knowledge on climate change's impact on farming.<br>
+                        <strong>My Request:</strong> Explain three major impacts of climate change on agriculture in tropical regions, with specific examples from the past decade. Write a summary of key concepts that would help me speak intelligently in the interview.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Examples -->
+        <div class="technique-card">
+            <div class="technique-header"><span class="technique-icon">🎨</span><div class="technique-title"><h3>Show Examples</h3><p>Provide a "what good looks like" template for the AI to emulate.</p></div></div>
+            <div class="technique-content">
+                <p>Sometimes showing is better than telling. If you need a specific style or format that's hard to describe, provide one or more examples directly in your prompt. This is often called <strong>"few-shot prompting."</strong></p>
+                <div class="example-box">
+                    <div class="prompt-example prompt-before">Please convert this technical statement to plain language: "The platform implements end-to-end encryption protocols to safeguard data integrity."</div>
+                    <div class="prompt-example prompt-after">
+                        Here are two examples of how to convert technical jargon into plain language:<br><br>
+                        <strong>Original:</strong> The quantum algorithm exhibits quadratic speed up.<br>
+                        <strong>Plain:</strong> The new method solves problems much faster.<br><br>
+                        <strong>Original:</strong> The interface leverages intuitive design paradigms.<br>
+                        <strong>Plain:</strong> The design is easy to understand and use.<br><br>
+                        Now, using that style, convert this technical statement to plain language: "The platform implements end-to-end encryption protocols to safeguard data integrity."
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Constraints -->
+        <div class="technique-card">
+            <div class="technique-header"><span class="technique-icon">📐</span><div class="technique-title"><h3>Specify Output Constraints</h3><p>Define the exact format, length, and structure of the desired response.</p></div></div>
+            <div class="technique-content">
+                <p>Don't leave the output format to chance. Be explicit about every detail, from word count and section headers to coding languages and color palettes. This ensures the output is immediately usable.</p>
+                <div class="example-box">
+                    <div class="prompt-example prompt-before">Make me a portfolio website.</div>
+                    <div class="prompt-example prompt-after">
+                        Create a clean, modern, single-page art portfolio website.<br>
+                        <strong>Sections:</strong> Hero, About Me, Skills, Portfolio, Contact.<br>
+                        <strong>Features:</strong> Make the navigation menu sticky and responsive (hamburger menu on mobile).<br>
+                        <strong>Style:</strong> Use a sunset color palette and add a dark/light mode toggle in the navigation.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Steps -->
+        <div class="technique-card">
+            <div class="technique-header"><span class="technique-icon">🔢</span><div class="technique-title"><h3>Break Complex Tasks into Steps</h3><p>Guide the AI's process to ensure it follows your intended logic.</p></div></div>
+            <div class="technique-content">
+                <p>For complex requests, outline the exact sequence of steps you want the AI to follow. This is sometimes called <strong>"Chain of Thought"</strong> prompting, and it prevents the AI from taking an unintended or inefficient path.</p>
+                <div class="example-box">
+                    <div class="prompt-example prompt-before">Analyze this quarterly sales data.</div>
+                    <div class="prompt-example prompt-after">
+                        I'd like you to analyze the attached quarterly sales data. Please approach this task by following these steps in order:<br>
+                        1. Identify the top 3 performing products by revenue.<br>
+                        2. Compare the current quarter's total sales to the previous quarter's.<br>
+                        3. Highlight any unusual trends or outlier data points.<br>
+                        4. Suggest two possible reasons for these trends.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Think First -->
+        <div class="technique-card">
+            <div class="technique-header"><span class="technique-icon">🧠</span><div class="technique-title"><h3>Ask Claude to Think First</h3><p>Give the AI explicit space to reason before generating the final answer.</p></div></div>
+            <div class="technique-content">
+                <p>For problems requiring deep analysis, explicitly instruct the AI to think through the problem before providing a solution. This encourages more thorough, well-considered responses, and you can see its reasoning.</p>
+                <div class="example-box">
+                    <div class="prompt-example prompt-after">
+                        Before answering, please think through this problem carefully. Consider the different factors involved, potential constraints, and various approaches before recommending the best solution. [Your problem here...]
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Role -->
+        <div class="technique-card">
+            <div class="technique-header"><span class="technique-icon">🎭</span><div class="technique-title"><h3>Define a Role, Style, or Tone</h3><p>Tell the AI *who* it should be to frame its perspective and communication style.</p></div></div>
+            <div class="technique-content">
+                <p>Assigning a persona is a powerful way to shape the output. Ask the AI to act as a specific expert, adopt a particular communication style, or even take on the persona of a famous figure.</p>
+                <div class="example-box">
+                    <div class="prompt-example prompt-before">Review my website wireframe.</div>
+                    <div class="prompt-example prompt-after">
+                        Act as a world-class UX design expert with 20 years of experience. Your tone should be critical but constructive. Review this website wireframe and suggest three improvements focusing specifically on user navigation and accessibility for visually impaired users.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="secret-weapon">
+            <h2>The Secret Weapon: Ask for Help!</h2>
+            <p>When you're stuck, ask the AI to become your prompt engineer. Describe your goal and have it write the prompt for you.</p>
+            <code>"I'm trying to get you to help me [describe goal]. Can you help me craft a more effective prompt for this?"</code>
+        </section>
+
+        <section class="recap-section">
+            <h2>Final Recap: Best Practices</h2>
+            <div class="recap-grid">
+                <div class="recap-column">
+                    <h3>✔️ Consistently Works Well</h3>
+                    <ul>
+                        <li>Start with a clear task overview.</li>
+                        <li>Include format specifications.</li>
+                        <li>Provide rich background info.</li>
+                        <li>Set explicit constraints/requirements.</li>
+                    </ul>
+                </div>
+                <div class="recap-column">
+                    <h3>❌ Common Mistakes to Avoid</h3>
+                    <ul>
+                        <li>Assuming the AI can read your mind.</li>
+                        <li>Overloading one prompt with unrelated tasks.</li>
+                        <li>Being too vague about what success looks like.</li>
+                        <li>Not providing feedback on previous outputs.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+</body>
+</html>
