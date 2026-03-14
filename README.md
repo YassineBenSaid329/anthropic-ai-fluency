@@ -38,9 +38,7 @@ Instead of standard text notes, I am summarizing each lesson into clean, visuall
 - [x] **[A closer look at Diligence](lesson8-diligence.html)**
 
 ### 9. Conclusion & Certificate
-- [ ] Conclusion ⏳
--[ ] Certificate of completion 🏆
-- [ ] Additional activities ⏳
+- [x] **[Conclusion](lesson9-conclusion.html)**
 
 ---
 
