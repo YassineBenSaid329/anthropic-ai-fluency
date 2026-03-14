@@ -35,7 +35,7 @@ Instead of standard text notes, I am summarizing each lesson into clean, visuall
 - [ ] The Description-Discernment loop ⏳
 
 ### 8. Diligence
-- [ ] A closer look at Diligence ⏳
+- [x] **[A closer look at Diligence](lesson8-diligence.html)**
 
 ### 9. Conclusion & Certificate
 - [ ] Conclusion ⏳

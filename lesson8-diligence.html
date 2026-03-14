@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Closer Look at Diligence - Lesson Resume</title>
+    <style>
+        :root {
+            --primary-color: #5b42f3;
+            --secondary-color: #f3f4f6;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+            --warning-bg: #fff1f2;
+            --warning-border: #fda4af;
+            --warning-text: #881337;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e1b4b, #4338ca);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .analogy-box {
+            background-color: #eef2ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 0 0 40px 0;
+        }
+        .analogy-box h3 { margin-top: 0; color: var(--primary-color); display: flex; align-items: center; gap: 10px; }
+        .analogy-box p { margin: 0; }
+        
+        .diligence-pillar {
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .pillar-header {
+            display: flex; align-items: center; gap: 15px;
+            background-color: var(--secondary-color);
+            padding: 20px; border-bottom: 1px solid var(--border-color);
+        }
+        .pillar-icon { font-size: 2.5rem; }
+        .pillar-title h2 { margin: 0; font-size: 1.5rem; color: var(--primary-color); }
+        .pillar-title p { margin: 0; font-weight: 600; color: var(--text-muted); }
+
+        .pillar-content { padding: 25px; }
+        .pillar-content ul { list-style-type: '✓ '; padding-left: 20px; }
+        .pillar-content li { margin-bottom: 8px; padding-left: 10px; }
+        .practice-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: var(--bg-body);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        .accountability-box {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            border-left: 4px solid var(--warning-border);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .accountability-box h2 {
+            margin-top: 0; display: flex; align-items: center; justify-content: center; gap: 10px;
+            color: var(--warning-text);
+        }
+        .accountability-box p { font-size: 1.1rem; font-weight: 500; margin-bottom: 0; }
+
+        @media (max-width: 700px) { .content { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>A Closer Look at Diligence</h1>
+        <p>Ensuring Ethical, Safe, and Responsible AI Use</p>
+    </header>
+
+    <div class="content">
+        <section class="analogy-box">
+            <h3>🚗 The Driving Analogy</h3>
+            <p>Using AI is like driving a car. You don't just focus on getting from A to B (effectiveness). You also follow traffic rules, consider safety, and remain aware of your impact on others. <strong>Diligence is the responsible driving of AI.</strong></p>
+        </section>
+
+        <!-- 1. Creation Diligence -->
+        <div class="diligence-pillar">
+            <div class="pillar-header"><div class="pillar-icon">🏗️</div><div class="pillar-title"><h2>Creation Diligence</h2><p>Choosing your tools and methods thoughtfully.</p></div></div>
+            <div class="pillar-content">
+                <p>This is about being critical and intentional *before* you even start a major project. It requires you to consider the broader context of the AI systems you work with.</p>
+                <h4>Key Questions to Ask:</h4>
+                <ul>
+                    <li>How was this system trained and what data was used?</li>
+                    <li>Who owns the data I am inputting right now?</li>
+                    <li>How is my privacy and the privacy of others being protected?</li>
+                    <li>Does using this tool align with my personal or organizational values?</li>
+                </ul>
+                <div class="practice-box">
+                    <strong>In Practice:</strong> Before pasting sensitive company data into an AI chat, a diligent user first checks their organization's policies on third-party AI use and verifies the service's data protection and privacy terms.
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Transparency Diligence -->
+        <div class="diligence-pillar">
+            <div class="pillar-header"><div class="pillar-icon">📢</div><div class="pillar-title"><h2>Transparency Diligence</h2><p>Being open and honest about AI's role.</p></div></div>
+            <div class="pillar-content">
+                <p>This is about maintaining trust by being forthright about how AI was involved in your work. People have a right to know when AI plays a significant role in content or decisions that affect them.</p>
+                <h4>Key Questions to Ask:</h4>
+                <ul>
+                    <li>Who needs to know about AI's role in this work?</li>
+                    <li>How and when should I communicate this involvement?</li>
+                    <li>What level of detail makes sense to share?</li>
+                </ul>
+                <div class="practice-box">
+                    <strong>In Practice:</strong> After using an AI to help draft a team proposal, a diligent team member adds a footnote or comment saying, "Initial draft and structure generated with AI assistance, then manually edited and verified by [Your Name]."
+                </div>
+            </div>
+        </div>
+        
+        <!-- 3. Deployment Diligence -->
+        <div class="diligence-pillar">
+            <div class="pillar-header"><div class="pillar-icon">✅</div><div class="pillar-title"><h2>Deployment Diligence</h2><p>Taking ownership of the final output.</p></div></div>
+            <div class="pillar-content">
+                <p>When you use, share, or publish AI-assisted content, you are the one accountable for its quality and impact. The AI is a tool; you are the final checkpoint and publisher.</p>
+                <h4>Your Responsibility Checklist:</h4>
+                <ul>
+                    <li>Have I verified all facts, figures, and sources?</li>
+                    <li>Have I checked for and corrected any potential biases?</li>
+                    <li>Do I have the necessary usage rights for this content?</li>
+                    <li>Can I confidently stand behind this work as my own?</li>
+                </ul>
+                <div class="practice-box">
+                    <strong>In Practice:</strong> A journalist uses an AI to summarize interview transcripts for an article. Before publishing, they meticulously cross-reference every summary point with the original audio to ensure complete accuracy, just as they would if a human assistant had done the work.
+                </div>
+            </div>
+        </div>
+
+        <section class="accountability-box">
+            <h2>⚠️ The Unspoken Rule: You Are Accountable</h2>
+            <p>When you share AI-generated content with the world, <strong>you, not the AI,</strong> are ultimately responsible for its accuracy, appropriateness, and impact.</p>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>
